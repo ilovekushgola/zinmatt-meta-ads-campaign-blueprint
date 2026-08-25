@@ -1,0 +1,1458 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zinmatt | Meta Ads Campaign Blueprint</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0B1220; --ink2:#1E293B; --body:#4A5A70; --mut:#7C8CA3;
+  --line:#E4EAF2; --line2:#EEF2F8;
+  --bg:#FFFFFF; --sur:#F7F9FC; --sur2:#FBFCFE;
+  --or:#F26522; --or2:#FF8A3D; --orl:#FFF3EC;
+  --bl:#1D63E6; --bl2:#4B8BF5; --bll:#EEF4FF;
+  --gr:#0E9E63; --gr2:#2FBE84; --grl:#EAF8F1;
+  --sh:0 1px 2px rgba(11,18,32,.04),0 8px 24px rgba(11,18,32,.06);
+  --sh2:0 2px 4px rgba(11,18,32,.04),0 18px 46px rgba(11,18,32,.10);
+  --r:16px; --r2:22px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:78px}
+body{background:var(--bg);color:var(--body);font-family:'Inter',system-ui,sans-serif;
+  font-size:15px;line-height:1.68;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,h5,.dsp,.num{font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);line-height:1.18;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+
+/* ---------- NAV ---------- */
+.nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.86);
+  backdrop-filter:saturate(180%) blur(16px);border-bottom:1px solid var(--line)}
+.nvi{display:flex;align-items:center;gap:8px;height:70px}
+.lg{display:flex;align-items:center;gap:11px;margin-right:auto;flex-shrink:0}
+.lgm{width:34px;height:34px;border-radius:9px;background:linear-gradient(140deg,var(--or),var(--or2));
+  display:grid;place-items:center;color:#fff;font-family:'Plus Jakarta Sans';font-weight:800;font-size:16px;
+  box-shadow:0 4px 12px rgba(242,101,34,.28)}
+.lgt{font-family:'Plus Jakarta Sans';font-weight:800;font-size:17px;color:var(--ink);letter-spacing:-.03em}
+.lgs{display:block;font-family:'Inter';font-weight:500;font-size:10.5px;color:var(--mut);letter-spacing:.09em;
+  text-transform:uppercase;line-height:1.4}
+.nlk{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.nlk::-webkit-scrollbar{display:none}
+.nlk a{font-size:13px;font-weight:500;color:var(--body);padding:8px 13px;border-radius:9px;
+  white-space:nowrap;transition:.18s}
+.nlk a:hover{background:var(--sur);color:var(--ink)}
+.nbtn{margin-left:10px;background:var(--ink);color:#fff;font-size:13px;font-weight:600;
+  padding:10px 18px;border-radius:10px;white-space:nowrap;flex-shrink:0}
+
+/* ---------- SECTION ---------- */
+section{padding:100px 0;position:relative}
+section.alt{background:var(--sur);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11.5px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--or);margin-bottom:18px}
+.eyebrow:before{content:'';width:26px;height:2px;background:var(--or);border-radius:2px}
+.eyebrow.b{color:var(--bl)} .eyebrow.b:before{background:var(--bl)}
+.eyebrow.g{color:var(--gr)} .eyebrow.g:before{background:var(--gr)}
+h2.sh{font-size:clamp(30px,4.2vw,46px);font-weight:800;margin-bottom:16px}
+.dek{font-size:17px;color:var(--body);max-width:760px;line-height:1.7}
+.shead{margin-bottom:52px}
+h3.bh{font-size:22px;font-weight:700;margin-bottom:6px}
+.bhs{font-size:14.5px;color:var(--mut);margin-bottom:24px}
+.sp{height:44px}.sp-s{height:24px}
+/* ---------- HERO ---------- */
+.hero{padding:104px 0 96px;background:
+  radial-gradient(1000px 520px at 88% -12%,rgba(242,101,34,.10),transparent 62%),
+  radial-gradient(880px 480px at 4% 108%,rgba(29,99,230,.09),transparent 60%),
+  linear-gradient(180deg,#fff,#FBFCFE);
+  border-bottom:1px solid var(--line);overflow:hidden}
+.hg{display:grid;grid-template-columns:1.12fr .88fr;gap:64px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);
+  padding:8px 16px 8px 12px;border-radius:100px;font-size:12.5px;font-weight:600;color:var(--ink2);
+  margin-bottom:26px;box-shadow:var(--sh)}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--gr);position:relative}
+.pulse:after{content:'';position:absolute;inset:-4px;border-radius:50%;background:rgba(14,158,99,.22)}
+h1{font-size:clamp(38px,5.6vw,63px);font-weight:800;letter-spacing:-.035em;margin-bottom:22px}
+h1 em{font-style:normal;color:var(--or)}
+.hlead{font-size:18px;line-height:1.72;max-width:600px;margin-bottom:34px}
+.hbtns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:12px;
+  font-family:'Plus Jakarta Sans';font-weight:700;font-size:14.5px;transition:.2s}
+.btn-p{background:var(--or);color:#fff;box-shadow:0 6px 20px rgba(242,101,34,.3)}
+.btn-p:hover{background:#DE5615;transform:translateY(-1px)}
+.btn-s{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:var(--sh)}
+.btn-s:hover{border-color:var(--ink2)}
+.hstats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);padding-top:26px}
+.hst{padding-right:18px;border-right:1px solid var(--line)}
+.hstats .hst:last-child{border-right:none}
+.hst .n{font-family:'Plus Jakarta Sans';font-size:27px;font-weight:800;color:var(--ink);letter-spacing:-.03em}
+.hst .n span{font-size:15px;color:var(--mut);font-weight:600}
+.hst .l{font-size:11.5px;color:var(--mut);font-weight:500;letter-spacing:.05em;text-transform:uppercase;margin-top:2px}
+
+/* hero visual card */
+.hvis{background:#fff;border:1px solid var(--line);border-radius:var(--r2);padding:26px;box-shadow:var(--sh2)}
+.hvt{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.hvt h4{font-size:14px;font-weight:700}
+.mini{display:flex;flex-direction:column;gap:9px}
+.mrow{display:flex;align-items:center;gap:11px;padding:12px 14px;border-radius:11px;
+  border:1px solid var(--line);background:var(--sur2);font-size:12.5px}
+.mrow.top{background:linear-gradient(135deg,rgba(242,101,34,.09),rgba(255,138,61,.04));border-color:rgba(242,101,34,.26)}
+.mrow.ind{margin-left:22px}
+.mdot{width:8px;height:8px;border-radius:2px;flex-shrink:0}
+.mrow b{font-family:'Plus Jakarta Sans';font-weight:700;color:var(--ink);font-size:12.5px}
+.mrow .r{margin-left:auto;font-weight:600;color:var(--mut);font-size:11.5px;white-space:nowrap}
+
+/* ---------- CARDS / GRID ---------- */
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;transition:.22s}
+.card:hover{box-shadow:var(--sh2);transform:translateY(-2px);border-color:#D6DEEA}
+.card h4{font-size:17px;font-weight:700;margin-bottom:9px}
+.card p{font-size:14px;line-height:1.66}
+.ico{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;margin-bottom:16px;
+  font-family:'Plus Jakarta Sans';font-weight:800;font-size:15px}
+.i-o{background:var(--orl);color:var(--or)} .i-b{background:var(--bll);color:var(--bl)}
+.i-g{background:var(--grl);color:var(--gr)} .i-n{background:var(--sur);color:var(--ink2)}
+.stat{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:.22s}
+.stat:hover{box-shadow:var(--sh2);transform:translateY(-2px)}
+.stat .n{font-family:'Plus Jakarta Sans';font-size:34px;font-weight:800;letter-spacing:-.04em;color:var(--ink);line-height:1}
+.stat .t{font-size:13.5px;font-weight:700;color:var(--ink2);margin:10px 0 5px}
+.stat .d{font-size:13px;color:var(--mut);line-height:1.6}
+.bar-t{height:3px;border-radius:3px;margin-bottom:20px;width:38px}
+.bt-o{background:var(--or)}.bt-b{background:var(--bl)}.bt-g{background:var(--gr)}
+/* ---------- TABLE ---------- */
+.tbl{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.tsc{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:600px}
+th{background:var(--sur);text-align:left;padding:15px 20px;font-family:'Plus Jakarta Sans';
+  font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--mut);
+  border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:15px 20px;border-bottom:1px solid var(--line2);vertical-align:top;color:var(--body)}
+tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--sur2)}
+td strong{color:var(--ink);font-weight:600}
+tr.hl{background:var(--grl)!important}
+tr.hl td{border-bottom-color:rgba(14,158,99,.14)}
+
+/* ---------- TAGS ---------- */
+.tg{display:inline-block;padding:4px 11px;border-radius:7px;font-size:11.5px;font-weight:700;
+  letter-spacing:.01em;white-space:nowrap;font-family:'Plus Jakarta Sans'}
+.tg-o{background:var(--orl);color:#C64A0F} .tg-b{background:var(--bll);color:#1550BE}
+.tg-g{background:var(--grl);color:#0A7F4F} .tg-n{background:var(--sur);color:var(--body);border:1px solid var(--line)}
+.tg-w{background:#FFF7E6;color:#9A6800}
+.tgs{display:flex;flex-wrap:wrap;gap:6px}
+
+/* ---------- QUOTE ---------- */
+.quote{border-left:3px solid var(--or);background:var(--orl);padding:16px 20px;border-radius:0 12px 12px 0;
+  font-size:14.5px;color:var(--ink2);font-style:italic;line-height:1.6}
+.quote.b{border-color:var(--bl);background:var(--bll)}
+.quote cite{display:block;font-style:normal;font-size:12px;color:var(--mut);margin-top:8px;font-weight:500}
+
+/* ---------- PERSONA ---------- */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:22px}
+.pcard{background:#fff;border:1px solid var(--line);border-radius:var(--r2);overflow:hidden;
+  box-shadow:var(--sh);transition:.24s;display:flex;flex-direction:column}
+.pcard:hover{box-shadow:var(--sh2);transform:translateY(-3px)}
+.phd{padding:24px 26px;border-bottom:1px solid var(--line);display:flex;gap:16px;align-items:flex-start;position:relative}
+.phd.h1{background:linear-gradient(120deg,#FFF6F0,#fff)}
+.phd.h2{background:linear-gradient(120deg,#FFF0F5,#fff)}
+.phd.h3{background:linear-gradient(120deg,#EDFAF3,#fff)}
+.phd.h4{background:linear-gradient(120deg,#EFF5FF,#fff)}
+.phd.h5{background:linear-gradient(120deg,#FFFAEC,#fff)}
+.pav{width:58px;height:58px;border-radius:15px;flex-shrink:0;display:grid;place-items:center;
+  font-family:'Plus Jakarta Sans';font-weight:800;font-size:21px;color:#fff;letter-spacing:-.02em}
+.pav.a1{background:linear-gradient(140deg,#F26522,#FF9A5C)}
+.pav.a2{background:linear-gradient(140deg,#D6336C,#F06595)}
+.pav.a3{background:linear-gradient(140deg,#0E9E63,#38C98D)}
+.pav.a4{background:linear-gradient(140deg,#1D63E6,#5B93F7)}
+.pav.a5{background:linear-gradient(140deg,#E8940C,#FFC155)}
+.phd h3{font-size:19px;font-weight:800;margin-bottom:3px}
+.pmt{font-size:12.5px;color:var(--mut);font-weight:500;line-height:1.5}
+.prk{position:absolute;top:20px;right:22px;font-family:'Plus Jakarta Sans';font-size:10.5px;
+  font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--mut)}
+.pbd{padding:24px 26px;flex:1;display:flex;flex-direction:column;gap:0}
+.prow{display:grid;grid-template-columns:88px 1fr;gap:14px;padding:11px 0;border-bottom:1px dashed var(--line2)}
+.prow:last-of-type{border-bottom:none}
+.prow dt{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--mut);font-family:'Plus Jakarta Sans';padding-top:2px}
+.prow dd{font-size:13.5px;color:var(--ink2);line-height:1.6}
+.phook{margin-top:16px;background:var(--ink);color:#fff;border-radius:12px;padding:15px 18px}
+.phook .hl{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.5);font-family:'Plus Jakarta Sans';margin-bottom:5px}
+.phook .ht{font-size:14px;font-weight:600;color:#fff;line-height:1.5;font-family:'Plus Jakarta Sans'}
+/* ---------- HIERARCHY ---------- */
+.hier{display:flex;flex-direction:column;align-items:center;gap:0}
+.lvl{width:100%;background:#fff;border:1px solid var(--line);border-radius:var(--r2);
+  padding:28px 30px;box-shadow:var(--sh);position:relative}
+.lvl.L1{border-top:4px solid var(--or)}
+.lvl.L2{border-top:4px solid var(--bl)}
+.lvl.L3{border-top:4px solid var(--gr)}
+.lvh{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.lvn{font-family:'Plus Jakarta Sans';font-size:10.5px;font-weight:800;letter-spacing:.12em;
+  text-transform:uppercase;padding:5px 11px;border-radius:7px}
+.lvn.o{background:var(--orl);color:#C64A0F}.lvn.b{background:var(--bll);color:#1550BE}
+.lvn.g{background:var(--grl);color:#0A7F4F}
+.lvh h4{font-size:19px;font-weight:800}
+.lvd{font-size:14px;color:var(--body);margin-bottom:22px;max-width:820px}
+.conn{width:2px;height:40px;background:linear-gradient(180deg,var(--line),#C8D2E0);position:relative;flex-shrink:0}
+.conn:after{content:'';position:absolute;bottom:-1px;left:50%;transform:translateX(-50%);
+  width:8px;height:8px;border-radius:50%;background:#C8D2E0}
+.conn span{position:absolute;left:16px;top:50%;transform:translateY(-50%);white-space:nowrap;
+  font-size:11.5px;color:var(--mut);font-weight:600;letter-spacing:.03em}
+.nodes{display:grid;gap:14px}
+.n4{grid-template-columns:repeat(4,1fr)}
+.n2{grid-template-columns:repeat(2,1fr)}
+.node{background:var(--sur2);border:1px solid var(--line);border-radius:14px;padding:18px;transition:.2s}
+.node:hover{background:#fff;box-shadow:var(--sh);border-color:#D6DEEA}
+.node .nt{font-family:'Plus Jakarta Sans';font-size:14px;font-weight:700;color:var(--ink);
+  margin-bottom:12px;display:flex;align-items:center;gap:8px;line-height:1.3}
+.nk{width:6px;height:22px;border-radius:3px;flex-shrink:0}
+.nk-o{background:var(--or)}.nk-b{background:var(--bl)}.nk-g{background:var(--gr)}.nk-p{background:#D6336C}
+.node dl{display:flex;flex-direction:column;gap:6px}
+.node .dr{display:flex;gap:9px;font-size:12.5px;line-height:1.5}
+.node .dr b{color:var(--mut);font-weight:600;min-width:56px;font-size:11.5px;flex-shrink:0}
+.node .dr span{color:var(--ink2)}
+
+/* ---------- AD CREATIVE ---------- */
+.adgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.adcell{display:flex;flex-direction:column}
+.adcell.wide{grid-column:1/-1}
+.adtag{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.adtag .nm{font-family:'Plus Jakarta Sans';font-size:13.5px;font-weight:700;color:var(--ink)}
+.post{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  box-shadow:var(--sh2);display:flex;flex-direction:column;height:100%}
+.phead{display:flex;align-items:center;gap:10px;padding:13px 14px 11px}
+.pgav{width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,var(--or),var(--or2));
+  display:grid;place-items:center;color:#fff;font-family:'Plus Jakarta Sans';font-weight:800;font-size:15px;flex-shrink:0}
+.phead .pg{font-family:'Plus Jakarta Sans';font-size:13.5px;font-weight:700;color:#0B1220;line-height:1.3}
+.phead .ps{font-size:11.5px;color:#8A93A0;line-height:1.4}
+.pcopy{padding:0 14px 12px;font-size:13px;line-height:1.58;color:#1E293B}
+.pcopy strong{font-weight:700;color:#0B1220}
+
+/* --- real creative image --- */
+.crimg{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-top:1px solid var(--line2);
+  border-bottom:1px solid var(--line2);background:var(--sur)}
+.crimg.sq{aspect-ratio:1/1}
+.crimg.ls{aspect-ratio:3/2}
+.crimg.nf{aspect-ratio:auto;height:auto;object-fit:contain;object-position:center}
+.crow{display:flex;gap:10px;padding:12px 14px;border-top:1px solid var(--line2);background:#fff}
+.crow .cr{flex:1;min-width:0}
+.crow .crt{font-family:'Plus Jakarta Sans';font-size:12px;font-weight:700;color:#0B1220;line-height:1.4;
+  display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.crow .crd{font-size:11.5px;color:#7C8CA3;margin-top:3px;line-height:1.5}
+.crow .crc{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
+.crow .crc .tg{font-size:10px;padding:3px 8px}
+
+/* --- hierarchy creative tiles --- */
+.ctiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:10px}
+.ctile{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:.18s}
+.ctile:hover{box-shadow:var(--sh);transform:translateY(-2px);border-color:#D6DEEA}
+.ctile img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:var(--sur)}
+.ctile .cl{font-size:10px;font-weight:700;font-family:'Plus Jakarta Sans';color:var(--ink2);
+  padding:6px 9px;border-top:1px solid var(--line2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ctile .cc{display:block;font-size:9.5px;color:var(--mut);font-weight:600;padding:0 9px 6px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* --- the creative "image" 1:1 --- */
+.cre{aspect-ratio:1/1;position:relative;overflow:hidden;display:flex;flex-direction:column;
+  justify-content:space-between;padding:30px 28px;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+.cre.w{background:linear-gradient(165deg,#FFFFFF 0%,#FFF6F0 100%)}
+.cre.wb{background:linear-gradient(165deg,#FFFFFF 0%,#EFF5FF 100%)}
+.cre.wg{background:linear-gradient(165deg,#FFFFFF 0%,#EDFAF3 100%)}
+.cre.wp{background:linear-gradient(165deg,#FFFFFF 0%,#FFF0F5 100%)}
+.cre.dk{background:linear-gradient(160deg,#0B1220 0%,#1B2740 100%)}
+.cre.dko{background:linear-gradient(160deg,#7A2A08 0%,#F26522 130%)}
+.cre.dkb{background:linear-gradient(160deg,#0C2F73 0%,#1D63E6 130%)}
+.cre.dkg{background:linear-gradient(160deg,#064A2E 0%,#0E9E63 130%)}
+/* decorative geometry */
+.blob{position:absolute;border-radius:50%;pointer-events:none}
+.b1{width:230px;height:230px;right:-70px;top:-70px;background:radial-gradient(circle,rgba(242,101,34,.16),transparent 68%)}
+.b2{width:190px;height:190px;left:-60px;bottom:-60px;background:radial-gradient(circle,rgba(29,99,230,.14),transparent 68%)}
+.b3{width:200px;height:200px;right:-60px;bottom:-70px;background:radial-gradient(circle,rgba(14,158,99,.15),transparent 68%)}
+.bw{width:250px;height:250px;right:-80px;top:-80px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 66%)}
+.rings{position:absolute;right:-46px;top:50%;transform:translateY(-50%);width:190px;height:190px;
+  border-radius:50%;border:1px solid rgba(11,18,32,.07);pointer-events:none}
+.rings:before,.rings:after{content:'';position:absolute;border-radius:50%;border:1px solid rgba(11,18,32,.06)}
+.rings:before{inset:26px}.rings:after{inset:52px}
+.rings.lt{border-color:rgba(255,255,255,.18)}
+.rings.lt:before,.rings.lt:after{border-color:rgba(255,255,255,.14)}
+.grid-dots{position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(rgba(11,18,32,.07) 1px,transparent 1px);background-size:18px 18px;opacity:.7}
+.grid-dots.lt{background-image:radial-gradient(rgba(255,255,255,.16) 1px,transparent 1px)}
+.cz{position:relative;z-index:3}
+/* creative typography */
+.cbrand{display:flex;align-items:center;gap:9px;position:relative;z-index:3}
+.cbm{width:26px;height:26px;border-radius:7px;background:linear-gradient(140deg,var(--or),var(--or2));
+  display:grid;place-items:center;color:#fff;font-family:'Plus Jakarta Sans';font-weight:800;font-size:12px}
+.cbm.wt{background:#fff;color:var(--or)}
+.cbn{font-family:'Plus Jakarta Sans';font-weight:800;font-size:13px;letter-spacing:-.02em;color:var(--ink)}
+.cbn.wt{color:#fff}
+.ckick{font-family:'Plus Jakarta Sans';font-size:10.5px;font-weight:700;letter-spacing:.15em;
+  text-transform:uppercase;margin-bottom:12px}
+.ckick.o{color:var(--or)}.ckick.b{color:var(--bl)}.ckick.g{color:var(--gr)}.ckick.p{color:#D6336C}
+.ckick.wt{color:rgba(255,255,255,.72)}
+.chead{font-family:'Plus Jakarta Sans';font-weight:800;font-size:30px;line-height:1.13;
+  letter-spacing:-.035em;color:var(--ink)}
+.chead.wt{color:#fff}
+.chead .mk{color:var(--or)}
+.chead .mkb{color:var(--bl)}
+.chead .mkg{color:var(--gr)}
+.chead .mkp{color:#D6336C}
+.chead .hi{background:linear-gradient(180deg,transparent 62%,rgba(242,101,34,.28) 62%);padding:0 2px}
+.csub{font-size:13.5px;line-height:1.6;color:var(--body);margin-top:14px;max-width:88%}
+.csub.wt{color:rgba(255,255,255,.85)}
+.cbul{display:flex;flex-direction:column;gap:7px;margin-top:16px}
+.cbul li{list-style:none;display:flex;align-items:flex-start;gap:9px;font-size:12.5px;
+  font-weight:500;color:var(--ink2);line-height:1.45}
+.cbul li.wt{color:rgba(255,255,255,.9)}
+.ck{width:15px;height:15px;border-radius:4px;background:var(--gr);flex-shrink:0;margin-top:2px;
+  display:grid;place-items:center}
+.ck svg{width:9px;height:9px}
+.ck.wt{background:rgba(255,255,255,.92)}
+.cfoot{display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative;z-index:3}
+.cpill{display:inline-flex;align-items:baseline;gap:7px;background:var(--ink);color:#fff;
+  padding:9px 16px;border-radius:9px}
+.cpill.o{background:var(--or)}.cpill.wt{background:#fff}
+.cpill .pv{font-family:'Plus Jakarta Sans';font-weight:800;font-size:17px;letter-spacing:-.02em}
+.cpill .pl{font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;opacity:.72}
+.cpill.wt .pv{color:var(--or)}.cpill.wt .pl{color:var(--ink2)}
+.cdate{text-align:right}
+.cdate .dl{font-size:10px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--mut)}
+.cdate .dv{font-family:'Plus Jakarta Sans';font-weight:800;font-size:14px;color:var(--ink);letter-spacing:-.02em}
+.cdate.wt .dl{color:rgba(255,255,255,.6)}.cdate.wt .dv{color:#fff}
+.cbadge{position:absolute;top:26px;right:26px;z-index:4;background:var(--ink);color:#fff;
+  font-family:'Plus Jakarta Sans';font-weight:800;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;padding:7px 13px;border-radius:100px}
+.cbadge.o{background:var(--or)}.cbadge.wt{background:#fff;color:var(--ink)}
+.cnum{font-family:'Plus Jakarta Sans';font-weight:800;font-size:56px;line-height:.9;
+  letter-spacing:-.05em;color:var(--or)}
+.cnum.wt{color:#fff}
+.cnum small{font-size:22px;font-weight:700}
+.cmeter{margin-top:18px;display:flex;flex-direction:column;gap:9px}
+.cmr{display:flex;align-items:center;gap:10px;font-size:11.5px;font-weight:600;color:var(--ink2)}
+.cmr.wt{color:rgba(255,255,255,.88)}
+.cmt{flex:1;height:7px;border-radius:5px;background:rgba(11,18,32,.08);overflow:hidden}
+.cmt.wt{background:rgba(255,255,255,.22)}
+.cmf{height:100%;border-radius:5px}
+.cmf.o{background:var(--or)}.cmf.g{background:var(--gr)}.cmf.b{background:var(--bl)}
+.cmf.w{background:#fff}
+.cmr .vl{font-family:'Plus Jakarta Sans';font-weight:800;min-width:58px;text-align:right}
+
+/* post footer (headline strip + CTA) */
+.pfoot{background:#F2F4F8;border-top:1px solid var(--line2);padding:12px 14px;display:flex;
+  align-items:center;justify-content:space-between;gap:12px;margin-top:auto}
+.pfoot .ph{font-family:'Plus Jakarta Sans';font-weight:700;font-size:13.5px;color:#0B1220;line-height:1.3}
+.pfoot .pd{font-size:11.5px;color:#7C8CA3;margin-top:2px}
+.pcta{background:var(--bl);color:#fff;font-family:'Plus Jakarta Sans';font-weight:700;font-size:12px;
+  padding:9px 15px;border-radius:8px;white-space:nowrap;flex-shrink:0}
+.adspec{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;padding-top:12px;border-top:1px dashed var(--line)}
+.adspec div{font-size:11.5px;color:var(--mut)}
+.adspec b{color:var(--ink2);font-weight:600}
+/* ---------- FUNNEL ---------- */
+.fun{display:flex;flex-direction:column;gap:12px}
+.fst{display:flex;align-items:center;gap:20px;background:#fff;border:1px solid var(--line);
+  border-radius:var(--r);padding:20px 26px;box-shadow:var(--sh);transition:.2s;position:relative}
+.fst:hover{transform:translateX(4px);box-shadow:var(--sh2)}
+.fnm{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;flex-shrink:0;
+  font-family:'Plus Jakarta Sans';font-weight:800;font-size:15px;color:#fff}
+.fs1{background:var(--or)}.fs2{background:#EE7C3A}.fs3{background:var(--bl)}
+.fs4{background:#2FA36B}.fs5{background:var(--gr)}
+.fst .ft{font-family:'Plus Jakarta Sans';font-size:16px;font-weight:700;color:var(--ink);margin-bottom:2px}
+.fst .fd{font-size:13.5px;color:var(--body);line-height:1.55}
+.fst .fm{margin-left:auto;text-align:right;flex-shrink:0}
+.fst .fm .v{font-family:'Plus Jakarta Sans';font-weight:800;font-size:16px;color:var(--ink)}
+.fst .fm .k{font-size:11px;color:var(--mut);letter-spacing:.05em;text-transform:uppercase}
+.fw1{width:100%}.fw2{width:96%}.fw3{width:92%}.fw4{width:88%}.fw5{width:84%}
+
+/* ---------- TIMELINE ---------- */
+.tl{position:relative;padding-left:38px}
+.tl:before{content:'';position:absolute;left:11px;top:8px;bottom:8px;width:2px;
+  background:linear-gradient(180deg,var(--or),var(--bl) 55%,var(--gr))}
+.tli{position:relative;padding-bottom:30px}
+.tli:last-child{padding-bottom:0}
+.tli:before{content:'';position:absolute;left:-33px;top:5px;width:12px;height:12px;border-radius:50%;
+  background:#fff;border:3px solid var(--or);box-shadow:0 0 0 4px #fff}
+.tli.b:before{border-color:var(--bl)}.tli.g:before{border-color:var(--gr)}
+.tli h4{font-size:16.5px;font-weight:700;margin-bottom:5px;display:flex;gap:11px;align-items:center;flex-wrap:wrap}
+.tli p{font-size:14px;line-height:1.65}
+
+/* ---------- CHART ---------- */
+.chart{background:#fff;border:1px solid var(--line);border-radius:var(--r2);padding:32px;box-shadow:var(--sh)}
+.cbars{display:flex;align-items:flex-end;gap:28px;height:220px;padding-top:12px}
+.cb{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:10px}
+.cbf{width:100%;max-width:104px;border-radius:12px 12px 5px 5px;display:flex;flex-direction:column;
+  align-items:center;padding-top:12px;position:relative;transition:.3s}
+.cbf.f1{background:linear-gradient(180deg,#FFB27F,#F26522)}
+.cbf.f2{background:linear-gradient(180deg,#7FA9F5,#1D63E6)}
+.cbf.f3{background:linear-gradient(180deg,#4FCB95,#0E9E63)}
+.cbf .bv{font-family:'Plus Jakarta Sans';font-weight:800;font-size:15px;color:#fff}
+.cb .bk{text-align:center;font-size:12.5px;color:var(--body);line-height:1.45}
+.cb .bk b{display:block;font-family:'Plus Jakarta Sans';color:var(--ink);font-size:13px;font-weight:700}
+.clegend{display:flex;gap:22px;flex-wrap:wrap;margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.clg{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--body)}
+.clgd{width:11px;height:11px;border-radius:3px}
+
+/* ---------- CALLOUT ---------- */
+.co{border-radius:var(--r);padding:22px 26px;display:flex;gap:16px;align-items:flex-start;font-size:14px;line-height:1.66}
+.co .cl{width:4px;border-radius:3px;flex-shrink:0;align-self:stretch}
+.co b{color:var(--ink);font-weight:700}
+.co.ok{background:var(--grl);border:1px solid rgba(14,158,99,.2)}
+.co.ok .cl{background:var(--gr)}
+.co.no{background:#FFF1F0;border:1px solid rgba(214,51,60,.18)}
+.co.no .cl{background:#D6333C}
+.co.wr{background:#FFF8EB;border:1px solid rgba(232,148,12,.22)}
+.co.wr .cl{background:#E8940C}
+.co.inf{background:var(--bll);border:1px solid rgba(29,99,230,.18)}
+.co.inf .cl{background:var(--bl)}
+.co .ct{font-family:'Plus Jakarta Sans';font-weight:700;font-size:14.5px;color:var(--ink);
+  margin-bottom:5px;display:block}
+
+.chk{display:flex;flex-direction:column;gap:11px;margin-top:4px}
+.chk li{list-style:none;display:flex;gap:11px;align-items:flex-start;font-size:14px;line-height:1.6}
+.ckm{width:19px;height:19px;border-radius:6px;background:var(--grl);flex-shrink:0;margin-top:2px;
+  display:grid;place-items:center;color:var(--gr);font-size:11px;font-weight:800}
+.ckm.x{background:#FFF1F0;color:#D6333C}
+.mono{font-family:ui-monospace,'SF Mono',Consolas,monospace;font-size:12.5px;
+  background:var(--sur);border:1px solid var(--line);padding:2px 8px;border-radius:6px;color:var(--ink2)}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--ink);color:rgba(255,255,255,.62);padding:66px 0 54px}
+footer .fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;margin-bottom:44px}
+footer h5{font-family:'Plus Jakarta Sans';color:#fff;font-size:12px;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;margin-bottom:16px}
+footer p{font-size:13.5px;line-height:1.7}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+footer li{font-size:13.5px}
+footer .fb{border-top:1px solid rgba(255,255,255,.1);padding-top:26px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12.5px}
+.flg{display:flex;align-items:center;gap:11px;margin-bottom:16px}
+.flg .lgt{color:#fff}
+
+@media(max-width:980px){
+  .hg{grid-template-columns:1fr;gap:44px}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .n4{grid-template-columns:repeat(2,1fr)}
+  footer .fg{grid-template-columns:1fr;gap:32px}
+}
+@media(max-width:680px){
+  section{padding:64px 0}.wrap{padding:0 20px}
+  .g2,.g3,.g4,.n2,.n4{grid-template-columns:1fr}
+  .adgrid{grid-template-columns:1fr}
+  .hstats{grid-template-columns:repeat(2,1fr);gap:20px 0}
+  .hst{border-right:none}
+  .cbars{gap:14px;height:180px}
+  .chead{font-size:25px}
+  .prow{grid-template-columns:1fr;gap:3px}
+  .fst{flex-wrap:wrap}
+  .fst .fm{margin-left:0;text-align:left;width:100%}
+  .nlk{display:none}
+}
+@media print{
+  .nav{position:static}
+  body{font-size:11pt}
+  section{padding:34px 0;break-inside:avoid}
+  .card,.pcard,.lvl,.post,.tbl,.chart{break-inside:avoid;box-shadow:none}
+  footer{background:#fff;color:#333}
+  footer h5,.flg .lgt{color:#111}
+}
+</style>
+</head>
+<body>
+<!-- ================= NAV ================= -->
+<div class="nav"><div class="wrap nvi">
+  <div class="lg">
+    <div class="lgm">Z</div>
+    <div><span class="lgt">Zinmatt</span><span class="lgs">Meta Ads Blueprint</span></div>
+  </div>
+  <nav class="nlk">
+    <a href="#research">Research</a>
+    <a href="#personas">Personas</a>
+    <a href="#strategy">Strategy</a>
+    <a href="#hierarchy">Hierarchy</a>
+    <a href="#creative">Creative</a>
+    <a href="#budget">Budget</a>
+    <a href="#kpi">KPIs</a>
+  </nav>
+  <a href="#next" class="nbtn">Approve &amp; Launch</a>
+</div></div>
+
+<!-- ================= HERO ================= -->
+<header class="hero"><div class="wrap hg">
+  <div>
+    <div class="badge"><span class="pulse"></span> Campaign built · 8 ads live-ready · All PAUSED</div>
+    <h1>The complete Meta Ads system for a <em>zero-fee</em> course.</h1>
+    <p class="hlead">One Lead Generation campaign, four researched audiences, eight ad creatives and a
+    three-day budget ramp — engineered to fill the August 2 webinar at ₹15–20 per registration.</p>
+    <div class="hbtns">
+      <a href="#hierarchy" class="btn btn-p">View campaign hierarchy</a>
+      <a href="#creative" class="btn btn-s">See the 8 creatives</a>
+    </div>
+    <div class="hstats">
+      <div class="hst"><div class="n">₹15<span>–20</span></div><div class="l">Target CPL</div></div>
+      <div class="hst"><div class="n">136<span>+</span></div><div class="l">Expected leads</div></div>
+      <div class="hst"><div class="n">₹2,750</div><div class="l">Test budget</div></div>
+      <div class="hst"><div class="n">3<span> days</span></div><div class="l">To decision</div></div>
+    </div>
+  </div>
+
+  <div class="hvis">
+    <div class="hvt">
+      <h4>Account structure</h4>
+      <span class="tg tg-w">All paused</span>
+    </div>
+    <div class="mini">
+      <div class="mrow top"><span class="mdot" style="background:var(--or)"></span>
+        <b>Free DM Course — Aug 2</b><span class="r">CBO · ₹650/day</span></div>
+      <div class="mrow ind"><span class="mdot" style="background:var(--bl)"></span>
+        <b>Working Pro 25–35</b><span class="r">2 ads</span></div>
+      <div class="mrow ind"><span class="mdot" style="background:var(--bl)"></span>
+        <b>Tier-2 Grad 21–24</b><span class="r">2 ads</span></div>
+      <div class="mrow ind"><span class="mdot" style="background:var(--bl)"></span>
+        <b>Women 28–40</b><span class="r">2 ads</span></div>
+      <div class="mrow ind"><span class="mdot" style="background:var(--bl)"></span>
+        <b>Small Biz Owner 30–50</b><span class="r">2 ads</span></div>
+      <div class="mrow"><span class="mdot" style="background:var(--gr)"></span>
+        <b>Instant Form → WhatsApp → Webinar</b><span class="r">4 fields</span></div>
+    </div>
+  </div>
+</div></header>
+
+<!-- ================= EXEC SUMMARY ================= -->
+<section id="summary"><div class="wrap">
+  <div class="shead">
+    <div class="eyebrow">01 — Executive Summary</div>
+    <h2 class="sh">Why this campaign works</h2>
+    <p class="dek">India's digital marketing training market is a ₹3,000 Cr category where buyers have been
+    burned repeatedly. A ₹0 teaching model removes the single largest objection before the conversation starts,
+    so the ad only has to sell curiosity — not value.</p>
+  </div>
+
+  <div class="grid g3">
+    <div class="card"><div class="bar-t bt-o"></div><div class="ico i-o">01</div>
+      <h4>The offer</h4>
+      <p>A 90-day <b>live</b> Advanced Digital Marketing course with AI modules, one year of doubt support,
+      internship and job assistance — taught at zero fee. Enrolment happens through the August 2 webinar.</p></div>
+    <div class="card"><div class="bar-t bt-b"></div><div class="ico i-b">02</div>
+      <h4>The insight</h4>
+      <p>The number one fear in this market is not quality, it is loss. <i>"Paisa waste ho jayega."</i>
+      Zero price neutralises loss aversion, which is why free-offer lead gen consistently outperforms
+      discount messaging in this category.</p></div>
+    <div class="card"><div class="bar-t bt-g"></div><div class="ico i-g">03</div>
+      <h4>The mechanism</h4>
+      <p>Meta Lead Generation objective with native Instant Forms, then WhatsApp community, then webinar.
+      No landing page, no payment gate, the fewest possible steps between the scroll and the seat.</p></div>
+  </div>
+
+  <div class="sp"></div>
+  <div class="grid g2">
+    <div class="co ok"><div class="cl"></div><div>
+      <span class="ct">Say this in every ad</span>
+      FREE course. 90 days. Live classes. AI modules. Internship and job assistance. August 2 webinar.
+      Limited seats.</div></div>
+    <div class="co no"><div class="cl"></div><div>
+      <span class="ct">Never say this in an ad</span>
+      No mention of the tools investment, fees, EMI or payment. That is disclosed transparently inside
+      Day 1 of the webinar using the guitar analogy — the teaching is free, the instrument is yours.</div></div>
+  </div>
+</div></section>
+<!-- ================= RESEARCH ================= -->
+<section id="research" class="alt"><div class="wrap">
+  <div class="shead">
+    <div class="eyebrow b">02 — Research Overview</div>
+    <h2 class="sh">What the market told us</h2>
+    <p class="dek">Synthesised from 15+ sources across Reddit, Quora, Trustpilot, LinkedIn and consumer
+    complaint forums, plus SIDBI, Redseer, IAMAI-Dentsu and Naukri JobSpeak industry data.</p>
+  </div>
+
+  <div class="grid g4">
+    <div class="stat"><div class="bar-t bt-o"></div><div class="n">₹3,000<small style="font-size:18px"> Cr</small></div>
+      <div class="t">Training market size</div><div class="d">Growing 20–25% year on year across 4,500+ institutes in India.</div></div>
+    <div class="stat"><div class="bar-t bt-b"></div><div class="n">30.2%</div>
+      <div class="t">Market CAGR to 2035</div><div class="d">India's digital marketing market moves from $6.7B to $94B. Demand is structural.</div></div>
+    <div class="stat"><div class="bar-t bt-g"></div><div class="n">41%</div>
+      <div class="t">Enrolments from Tier-2</div><div class="d">The largest geographic slice — precisely where a free model lands hardest.</div></div>
+    <div class="stat"><div class="bar-t bt-o"></div><div class="n">No. 3</div>
+      <div class="t">Most in-demand skill</div><div class="d">Digital marketing ranks third nationally, with 25% year-on-year demand growth.</div></div>
+  </div>
+
+  <div class="sp"></div>
+  <h3 class="bh">Who actually enrols</h3>
+  <p class="bhs">Demographic split of online digital marketing course enrolments in India.</p>
+  <div class="tbl"><div class="tsc"><table>
+    <thead><tr><th>Segment</th><th>Share</th><th>What it means for the campaign</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Age 25–30</strong></td><td><span class="tg tg-b">34%</span></td>
+        <td>Largest block. Working professionals upskilling — highest intent, slightly higher CPM.</td></tr>
+      <tr><td><strong>Age 31–40</strong></td><td><span class="tg tg-b">29%</span></td>
+        <td>Career switchers and business owners. Strongest retargeting pool.</td></tr>
+      <tr><td><strong>Age 18–24</strong></td><td><span class="tg tg-b">28%</span></td>
+        <td>Students and fresh graduates. Cheapest CPL, highest volume, lower show-up.</td></tr>
+      <tr><td><strong>Working professionals</strong></td><td><span class="tg tg-g">72%</span></td>
+        <td>Evening class availability must appear in the copy — it is a purchase condition, not a feature.</td></tr>
+      <tr><td><strong>BA / Arts graduates</strong></td><td><span class="tg tg-g">32.1%</span></td>
+        <td>Non-technical background. The "no coding, no degree needed" angle is credible and needed.</td></tr>
+    </tbody>
+  </table></div></div>
+
+  <div class="sp"></div>
+  <h3 class="bh">Six pain points every ad is built on</h3>
+  <p class="bhs">Each objection below appears repeatedly in unprompted public reviews of paid competitors.</p>
+  <div class="tbl"><div class="tsc"><table>
+    <thead><tr><th style="width:30px">#</th><th>Pain point</th><th>Voice of the market</th><th>Zinmatt's answer</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><strong>Money wasted</strong><br><span class="tg tg-o">Primary fear</span></td>
+        <td><i>"Maine ₹35K diye, kuch nahi seekha."</i></td><td>Zero teaching fee — no financial risk to take.</td></tr>
+      <tr><td>2</td><td><strong>Theory, no practice</strong></td>
+        <td><i>"Google Ads course mein actually ads nahi chalaye."</i></td><td>Live campaigns on real tools and real budgets.</td></tr>
+      <tr><td>3</td><td><strong>Fake placement</strong></td>
+        <td><i>"Placement offered was BPO and data entry, not marketing."</i></td><td>Genuine internship plus job assistance.</td></tr>
+      <tr><td>4</td><td><strong>Worthless certificate</strong></td>
+        <td><i>"No employer cares about an institute certificate."</i></td><td>Skills-first, portfolio-led outcomes.</td></tr>
+      <tr><td>5</td><td><strong>Trainers who never practised</strong></td>
+        <td><i>"Jo padha rahe hain, unhone khud kaam nahi kiya."</i></td><td>Manish Rawat — 7 years, 40,000+ students trained.</td></tr>
+      <tr><td>6</td><td><strong>Ghosted after payment</strong></td>
+        <td><i>"After payment, support becomes zero."</i></td><td>One full year of free doubt support.</td></tr>
+    </tbody>
+  </table></div></div>
+
+  <div class="sp"></div>
+  <h3 class="bh">Three underserved openings</h3>
+  <p class="bhs">Where demand exists but no competitor is credibly present.</p>
+  <div class="grid g3">
+    <div class="card"><div class="ico i-o">W</div><h4>Women — 99% untapped</h4>
+      <p>Roughly 1% of India's gig internet workforce is women, yet <b>70%</b> of Tier-2 and Tier-3 women
+      entrepreneurs say they want digital skills. Over 140 million women sit inside Self-Help Group networks.
+      The nearest specialised competitor charges ₹75,000 a year.</p></div>
+    <div class="card"><div class="ico i-b">M</div><h4>MSMEs — 87% gap</h4>
+      <p>India has 63.4 million MSMEs, but only <b>13%</b> actively use digital marketing and <b>75%</b>
+      report a digital skills gap. 86% already use WhatsApp Business — for conversation, not for marketing.</p></div>
+    <div class="card"><div class="ico i-g">S</div><h4>The salary proof</h4>
+      <p>Structured-course graduates start at ₹3–4.5 LPA against ₹2–2.8 LPA for self-taught, and earn
+      <b>20–35% more</b> in their first role. This is the evidence base for the career-upgrade angle.</p></div>
+  </div>
+
+  <div class="sp"></div>
+  <h3 class="bh">Competitive landscape</h3>
+  <p class="bhs">We do not need to attack competitors. We only need to name the feeling they created.</p>
+  <div class="tbl"><div class="tsc"><table>
+    <thead><tr><th>Tier</th><th>Institute</th><th>Fee</th><th>Recurring student sentiment</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tg tg-o">Premium</span></td><td><strong>upGrad + MICA</strong></td><td>₹1.3L – ₹2.5L</td>
+        <td>Placement claims disputed; content does not justify the price.</td></tr>
+      <tr><td><span class="tg tg-o">Premium</span></td><td><strong>Henry Harvin</strong></td><td>₹70,000+</td>
+        <td>Multiple consumer forum complaints; refund disputes.</td></tr>
+      <tr><td><span class="tg tg-o">Premium</span></td><td><strong>Simplilearn</strong></td><td>₹64,000 – ₹1.7L</td>
+        <td>Perceived as expensive relative to delivered outcome.</td></tr>
+      <tr><td><span class="tg tg-w">Mid</span></td><td><strong>Digital Vidya</strong></td><td>₹65,000</td>
+        <td>Weak placement, heavily theoretical.</td></tr>
+      <tr><td><span class="tg tg-w">Mid</span></td><td><strong>DIDM</strong></td><td>₹35,000+</td>
+        <td>Theory-led with limited hands-on execution.</td></tr>
+      <tr><td><span class="tg tg-w">Mid</span></td><td><strong>Digiperform</strong></td><td>₹25,000+</td>
+        <td>Curriculum lags on AI and automation.</td></tr>
+      <tr><td><span class="tg tg-n">Free</span></td><td><strong>Google Digital Garage · HubSpot · Meta Blueprint</strong></td><td>₹0</td>
+        <td>Recognised content, but no mentorship, no live teaching, no placement path.</td></tr>
+      <tr class="hl"><td><span class="tg tg-g">Zinmatt</span></td><td><strong>Free Advanced DM Course</strong></td>
+        <td><strong>₹0 teaching</strong></td>
+        <td><strong>Live plus recorded, AI modules, 1-year support, internship and job assistance.</strong></td></tr>
+    </tbody>
+  </table></div></div>
+
+  <div class="sp"></div>
+  <div class="grid g4">
+    <div class="card"><h4>Zero fee</h4><p>No paid competitor can match the entry point.</p></div>
+    <div class="card"><h4>Radical transparency</h4><p>The guitar analogy discloses tool costs upfront, inside the webinar.</p></div>
+    <div class="card"><h4>Live, not recorded</h4><p>Interactive classes with recordings as backup, not as the product.</p></div>
+    <div class="card"><h4>90 days, intensive</h4><p>Not a diluted six to twelve month drip feed.</p></div>
+    <div class="card"><h4>Advanced AI modules</h4><p>Normally reserved for premium-priced programmes.</p></div>
+    <div class="card"><h4>One year of support</h4><p>Doubt clearing continues after the course ends.</p></div>
+    <div class="card"><h4>Internship and jobs</h4><p>Real placement support, not forwarded job links.</p></div>
+    <div class="card"><h4>Practitioner-led</h4><p>Manish Rawat — 7 years running live campaigns, 40,000+ students.</p></div>
+  </div>
+</div></section>
+<!-- ================= PERSONAS ================= -->
+<section id="personas"><div class="wrap">
+  <div class="shead">
+    <div class="eyebrow">03 — Audience</div>
+    <h2 class="sh">Five personas, ranked by priority</h2>
+    <p class="dek">Each persona carries its own fear, desire, buying trigger and hook. Four of the five
+    become dedicated ad sets in the test campaign; the fifth is held for the scaling phase.</p>
+  </div>
+
+  <div class="pgrid">
+
+    <div class="pcard">
+      <div class="phd h4">
+        <div class="pav a4">SV</div>
+        <div><h3>Sneha Verma</h3>
+        <div class="pmt">29 · Working professional, career switcher<br>Pune, Maharashtra · ₹25–45K per month</div></div>
+        <span class="prk">Priority 01</span>
+      </div>
+      <div class="pbd">
+        <div class="quote b">"Meri job mein growth nahi hai. Switch karna hai, but kaise?"</div>
+        <dl style="margin-top:16px">
+          <div class="prow"><dt>Fear</dt><dd>Losing salary stability mid-switch, and being told 29 is too late to restart.</dd></div>
+          <div class="prow"><dt>Desire</dt><dd>Double her income, work remotely, own a skill that will not be obsolete in five years.</dd></div>
+          <div class="prow"><dt>Trigger</dt><dd>A disappointing appraisal, or a batchmate's promotion appearing on LinkedIn.</dd></div>
+          <div class="prow"><dt>Objection</dt><dd>"I have no time." Answered by evening live classes plus recordings.</dd></div>
+          <div class="prow"><dt>Ad set</dt><dd><span class="tg tg-b">AS1 · Working Pro 25–35</span> <span class="tg tg-n">Highest intent</span></dd></div>
+        </dl>
+        <div class="phook"><div class="hl">Primary hook</div>
+          <div class="ht">"Job chhode bina career switch karo — evening classes, zero fees."</div></div>
+      </div>
+    </div>
+
+    <div class="pcard">
+      <div class="phd h1">
+        <div class="pav a1">RK</div>
+        <div><h3>Rahul Kumar</h3>
+        <div class="pmt">22 · B.Com graduate, unemployed<br>Kanpur, Uttar Pradesh · ₹0–15K per month</div></div>
+        <span class="prk">Priority 02</span>
+      </div>
+      <div class="pbd">
+        <div class="quote">"Sab paise maang rahe hain. Kya karu, kuch samajh nahi aa raha."</div>
+        <dl style="margin-top:16px">
+          <div class="prow"><dt>Fear</dt><dd>Spending ₹40,000 of family money and still ending up unemployed.</dd></div>
+          <div class="prow"><dt>Desire</dt><dd>A ₹25–30K per month job that makes his parents proud and ends the daily questioning.</dd></div>
+          <div class="prow"><dt>Trigger</dt><dd>Watching juniors get placed while he is still applying.</dd></div>
+          <div class="prow"><dt>Objection</dt><dd>"Is free actually good?" Answered by trainer credibility and live proof.</dd></div>
+          <div class="prow"><dt>Ad set</dt><dd><span class="tg tg-o">AS2 · Tier-2 Grad 21–24</span> <span class="tg tg-n">Lowest CPL</span></dd></div>
+        </dl>
+        <div class="phook"><div class="hl">Primary hook</div>
+          <div class="ht">"Degree hai, job nahi? 90 din mein job-ready skill — bilkul free."</div></div>
+      </div>
+    </div>
+
+    <div class="pcard">
+      <div class="phd h2">
+        <div class="pav a2">PS</div>
+        <div><h3>Priya Sharma</h3>
+        <div class="pmt">32 · Homemaker, B.A. graduate<br>Jaipur, Rajasthan · Household ₹40–60K per month</div></div>
+        <span class="prk">Priority 03</span>
+      </div>
+      <div class="pbd">
+        <div class="quote">"Main ghar se kuch kar sakti hun? Family ko batana bhi mushkil hai."</div>
+        <dl style="margin-top:16px">
+          <div class="prow"><dt>Fear</dt><dd>Family judgement, and spending household money on something for herself.</dd></div>
+          <div class="prow"><dt>Desire</dt><dd>₹15–25K per month earned from home, plus an identity beyond the household.</dd></div>
+          <div class="prow"><dt>Trigger</dt><dd>Seeing another homemaker earning online on Instagram.</dd></div>
+          <div class="prow"><dt>Objection</dt><dd>"I cannot leave the house." Answered by fully online, flexible timing.</dd></div>
+          <div class="prow"><dt>Ad set</dt><dd><span class="tg tg-o">AS3 · Women 28–40</span> <span class="tg tg-g">Highest loyalty</span></dd></div>
+        </dl>
+        <div class="phook"><div class="hl">Primary hook</div>
+          <div class="ht">"Ghar se kaam, apni income — bina ek rupaya lagaye, ghar baithe seekho."</div></div>
+      </div>
+    </div>
+
+    <div class="pcard">
+      <div class="phd h3">
+        <div class="pav a3">AP</div>
+        <div><h3>Amit Patel</h3>
+        <div class="pmt">38 · Small business owner, retail<br>Surat, Gujarat · ₹50K–2L per month</div></div>
+        <span class="prk">Priority 04</span>
+      </div>
+      <div class="pbd">
+        <div class="quote">"Agency ₹25,000 per month maang rahi hai. Main khud seekh lu to better hai."</div>
+        <dl style="margin-top:16px">
+          <div class="prow"><dt>Fear</dt><dd>Paying an agency month after month with nothing measurable to show for it.</dd></div>
+          <div class="prow"><dt>Desire</dt><dd>Run his own ads, double or triple enquiries, stop depending on outsiders.</dd></div>
+          <div class="prow"><dt>Trigger</dt><dd>A competitor's shop visibly growing through Instagram.</dd></div>
+          <div class="prow"><dt>Objection</dt><dd>"I have no time to learn." Answered by 90 days, evening batch, immediate application.</dd></div>
+          <div class="prow"><dt>Ad set</dt><dd><span class="tg tg-g">AS4 · Biz Owner 30–50</span> <span class="tg tg-n">Best ROI story</span></dd></div>
+        </dl>
+        <div class="phook"><div class="hl">Primary hook</div>
+          <div class="ht">"Agency ko ₹25,000 dene se pehle — khud seekh lo, bilkul free."</div></div>
+      </div>
+    </div>
+
+    <div class="pcard">
+      <div class="phd h5">
+        <div class="pav a5">AS</div>
+        <div><h3>Arjun Singh</h3>
+        <div class="pmt">20 · College student, aspiring freelancer<br>Indore, Madhya Pradesh · ₹0–8K per month</div></div>
+        <span class="prk">Priority 05 · Hold</span>
+      </div>
+      <div class="pbd">
+        <div class="quote">"Padhai ke saath side income chahiye, ghar se paise nahi maang sakta."</div>
+        <dl style="margin-top:16px">
+          <div class="prow"><dt>Fear</dt><dd>Graduating with a degree and zero employable skill.</dd></div>
+          <div class="prow"><dt>Desire</dt><dd>₹10–20K per month freelancing while still in college.</dd></div>
+          <div class="prow"><dt>Trigger</dt><dd>Peers visibly earning from freelance work on Instagram and YouTube.</dd></div>
+          <div class="prow"><dt>Objection</dt><dd>"Will clients hire a student?" Answered by portfolio-first training.</dd></div>
+          <div class="prow"><dt>Status</dt><dd><span class="tg tg-w">Held for scaling phase</span> — cheapest CPM but weakest show-up rate.</dd></div>
+        </dl>
+        <div class="phook"><div class="hl">Primary hook</div>
+          <div class="ht">"College ke saath ₹20,000 per month — skill free mein seekho."</div></div>
+      </div>
+    </div>
+
+    <div class="pcard" style="border-style:dashed;background:var(--sur2)">
+      <div class="phd" style="background:transparent">
+        <div class="pav" style="background:var(--ink)">EX</div>
+        <div><h3>Anti-persona</h3>
+        <div class="pmt">Actively excluded from every ad set<br>Protects CPL and webinar show-up rate</div></div>
+      </div>
+      <div class="pbd">
+        <ul class="chk">
+          <li><span class="ckm x">X</span><div><b>Already-skilled marketers and agency owners.</b> They consume the free seat without converting.</div></li>
+          <li><span class="ckm x">X</span><div><b>Get-rich-quick seekers.</b> They will not survive a 90-day commitment and inflate drop-off.</div></li>
+          <li><span class="ckm x">X</span><div><b>No smartphone or stable internet.</b> Cannot complete a live online course.</div></li>
+          <li><span class="ckm x">X</span><div><b>Existing students and 30-day past leads.</b> Prevents paying twice for the same person.</div></li>
+          <li><span class="ckm x">X</span><div><b>Competitor staff and trainers.</b> Excluded via interest and employer targeting.</div></li>
+        </ul>
+        <div class="co inf" style="margin-top:20px;padding:16px 18px;font-size:13.5px"><div class="cl"></div>
+        <div>Exclusions are applied at ad set level, not campaign level, so each audience keeps its own
+        exclusion logic as we scale.</div></div>
+      </div>
+    </div>
+
+  </div>
+</div></section>
+<!-- ================= STRATEGY ================= -->
+<section id="strategy" class="alt"><div class="wrap">
+  <div class="shead">
+    <div class="eyebrow g">04 — Our Strategy</div>
+    <h2 class="sh">A three-day sprint to a funded decision</h2>
+    <p class="dek">The purpose of the first ₹2,750 is not volume. It is to identify which persona produces
+    the cheapest registration, so that every rupee spent afterwards is spent with evidence.</p>
+  </div>
+
+  <div class="grid g3">
+    <div class="card"><div class="ico i-o">A</div><h4>Test wide, decide fast</h4>
+      <p>Four audiences run simultaneously under one CBO campaign. Meta pushes spend toward whichever
+      persona responds, so we learn in three days what ABO would take three weeks to reveal.</p></div>
+    <div class="card"><div class="ico i-b">B</div><h4>Two emotions per audience</h4>
+      <p>Every ad set carries one pain-led ad and one gain-led ad. That way we learn the winning
+      <i>audience</i> and the winning <i>emotion</i> inside the same test window.</p></div>
+    <div class="card"><div class="ico i-g">C</div><h4>Scale only what is proven</h4>
+      <p>Winners are duplicated into a dedicated CBO scaling campaign at +20% increments. Losers are paused,
+      not rescued. Retargeting picks up the leftover attention at the lowest cost in the account.</p></div>
+  </div>
+
+  <div class="sp"></div>
+  <h3 class="bh">Funnel — from scroll to seat</h3>
+  <p class="bhs">Five steps, no landing page, no payment gate anywhere before the webinar.</p>
+  <div class="fun">
+    <div class="fst fw1"><div class="fnm fs1">1</div>
+      <div><div class="ft">Ad in Feed, Reels or Stories</div>
+      <div class="fd">Persona-matched hook stops the scroll. Advantage+ placements, Hindi and English.</div></div>
+      <div class="fm"><div class="v">8 ads</div><div class="k">Live variants</div></div></div>
+    <div class="fst fw2"><div class="fnm fs2">2</div>
+      <div><div class="ft">Meta Instant Form</div>
+      <div class="fd">Name, WhatsApp number, city, current status. Pre-filled by Meta, three taps to submit.</div></div>
+      <div class="fm"><div class="v">4 fields</div><div class="k">Target 60%+ completion</div></div></div>
+    <div class="fst fw3"><div class="fnm fs3">3</div>
+      <div><div class="ft">Thank-you confirmation</div>
+      <div class="fd">Confirms date and time, sets expectations, and routes straight into WhatsApp.</div></div>
+      <div class="fm"><div class="v">Instant</div><div class="k">Auto-reply</div></div></div>
+    <div class="fst fw4"><div class="fnm fs4">4</div>
+      <div><div class="ft">WhatsApp community</div>
+      <div class="fd">Reminders at T-24 hours, T-1 hour and at go-live. The single largest lever on show-up rate.</div></div>
+      <div class="fm"><div class="v">3 nudges</div><div class="k">Reminder sequence</div></div></div>
+    <div class="fst fw5"><div class="fnm fs5">5</div>
+      <div><div class="ft">Live webinar — August 2</div>
+      <div class="fd">Value delivered first, tools cost disclosed transparently, then enrolment close.</div></div>
+      <div class="fm"><div class="v">40–50%</div><div class="k">Target show-up</div></div></div>
+  </div>
+
+  <div class="sp"></div>
+  <h3 class="bh">Three-day launch sequence</h3>
+  <p class="bhs">Budget deliberately ramps as confidence increases.</p>
+  <div class="tl">
+    <div class="tli"><h4>Day 1 — Launch <span class="tg tg-o">₹500</span> <span class="tg tg-n">Learning phase</span></h4>
+      <p>All four ad sets go live with eight ads. Half budget, no optimisation decisions. We let Meta exit
+      the learning phase undisturbed and watch only CTR and CPM.</p></div>
+    <div class="tli b"><h4>Day 2 — Optimise <span class="tg tg-b">₹1,000</span> <span class="tg tg-n">First cuts</span></h4>
+      <p>Any ad below 1% CTR after 1,000 impressions is paused. Attention shifts to the two cheapest
+      ad sets. Full daily budget goes live.</p></div>
+    <div class="tli b"><h4>Day 3 — Push <span class="tg tg-b">₹1,250</span> <span class="tg tg-n">Urgency</span></h4>
+      <p>Winners receive a 25% budget increase and urgency copy is swapped in — tomorrow's webinar,
+      last remaining seats. Final WhatsApp reminder blast goes out.</p></div>
+    <div class="tli g"><h4>August 2 — Webinar day <span class="tg tg-g">Delivery</span></h4>
+      <p>Live delivery to an expected 55–68 attendees from 136+ registrations, with the tools-cost
+      disclosure handled inside Day 1 of the webinar.</p></div>
+    <div class="tli g"><h4>Post-webinar — Scale <span class="tg tg-g">Next cycle</span></h4>
+      <p>Duplicate winning ad sets into a CBO scaling campaign, launch retargeting against video viewers
+      and form abandoners, and repeat the sprint for the following webinar date.</p></div>
+  </div>
+</div></section>
+<!-- ================= HIERARCHY ================= -->
+<section id="hierarchy"><div class="wrap">
+  <div class="shead">
+    <div class="eyebrow b">05 — Campaign Hierarchy</div>
+    <h2 class="sh">One campaign, four ad sets, eight ads</h2>
+    <p class="dek">Objective and budget are decided at campaign level, audience at ad set level, and message
+    at ad level. Keeping these three layers clean is what makes the results readable.</p>
+  </div>
+
+  <div class="hier">
+
+    <!-- LEVEL 1 -->
+    <div class="lvl L1">
+      <div class="lvh">
+        <span class="lvn o">Level 1 · Campaign</span>
+        <h4>Zinmatt — Free DM Course — Webinar Aug 2</h4>
+        <span class="tg tg-w">Created paused</span>
+      </div>
+      <p class="lvd">Holds the objective, the budget strategy and the total spend. No audience or creative
+      decisions are made at this level.</p>
+      <div class="nodes n4">
+        <div class="node"><div class="nt"><span class="nk nk-o"></span>Objective</div><dl>
+          <div class="dr"><b>Goal</b><span>Lead Generation</span></div>
+          <div class="dr"><b>Result</b><span>Instant Form leads</span></div>
+          <div class="dr"><b>Event</b><span>Form submit</span></div></dl></div>
+        <div class="node"><div class="nt"><span class="nk nk-o"></span>Budget</div><dl>
+          <div class="dr"><b>Type</b><span>CBO, campaign level</span></div>
+          <div class="dr"><b>Daily</b><span>₹650 average</span></div>
+          <div class="dr"><b>Total</b><span>₹2,750 over 3 days</span></div></dl></div>
+        <div class="node"><div class="nt"><span class="nk nk-o"></span>Bidding</div><dl>
+          <div class="dr"><b>Strategy</b><span>Lowest cost</span></div>
+          <div class="dr"><b>Cap</b><span>None in learning phase</span></div>
+          <div class="dr"><b>Pacing</b><span>Standard</span></div></dl></div>
+        <div class="node"><div class="nt"><span class="nk nk-o"></span>Schedule</div><dl>
+          <div class="dr"><b>Runs</b><span>3 days pre-webinar</span></div>
+          <div class="dr"><b>Webinar</b><span>August 2</span></div>
+          <div class="dr"><b>Status</b><span>Paused until approval</span></div></dl></div>
+      </div>
+    </div>
+
+    <div class="conn"><span>CBO distributes budget to the best performing ad set automatically</span></div>
+
+    <!-- LEVEL 2 -->
+    <div class="lvl L2">
+      <div class="lvh">
+        <span class="lvn b">Level 2 · Ad Sets</span>
+        <h4>Four ad sets, one per persona</h4>
+        <span class="tg tg-n">Targeting · Placement · Optimisation</span>
+      </div>
+      <p class="lvd">One persona per ad set. This is the only structure that tells us which
+      <i>audience</i> is cheap, rather than only which creative performed.</p>
+      <div class="nodes n4">
+        <div class="node"><div class="nt"><span class="nk nk-b"></span>AS1 · Working Pro</div><dl>
+          <div class="dr"><b>Age</b><span>25–35, all genders</span></div>
+          <div class="dr"><b>Geo</b><span>Metro plus Tier-2</span></div>
+          <div class="dr"><b>Interest</b><span>Upskilling, job change, career growth</span></div>
+          <div class="dr"><b>Ads</b><span>Var A + Var B</span></div>
+          <div class="dr"><b>Est CPL</b><span>₹25</span></div></dl></div>
+        <div class="node"><div class="nt"><span class="nk nk-o"></span>AS2 · Tier-2 Grad</div><dl>
+          <div class="dr"><b>Age</b><span>21–24, all genders</span></div>
+          <div class="dr"><b>Geo</b><span>Tier-2 and Tier-3 cities</span></div>
+          <div class="dr"><b>Interest</b><span>Jobs, freshers, government exams</span></div>
+          <div class="dr"><b>Ads</b><span>Var A + Var B</span></div>
+          <div class="dr"><b>Est CPL</b><span>₹15</span></div></dl></div>
+        <div class="node"><div class="nt"><span class="nk nk-p"></span>AS3 · Women</div><dl>
+          <div class="dr"><b>Age</b><span>28–40, women only</span></div>
+          <div class="dr"><b>Geo</b><span>Tier-2, Tier-3 plus metro</span></div>
+          <div class="dr"><b>Interest</b><span>Work from home, homemakers, side income</span></div>
+          <div class="dr"><b>Ads</b><span>Var A + Var B</span></div>
+          <div class="dr"><b>Est CPL</b><span>₹22</span></div></dl></div>
+        <div class="node"><div class="nt"><span class="nk nk-g"></span>AS4 · Biz Owner</div><dl>
+          <div class="dr"><b>Age</b><span>30–50, all genders</span></div>
+          <div class="dr"><b>Geo</b><span>MSME clusters</span></div>
+          <div class="dr"><b>Interest</b><span>Small business, WhatsApp Business, entrepreneurship</span></div>
+          <div class="dr"><b>Ads</b><span>Var A + Var B</span></div>
+          <div class="dr"><b>Est CPL</b><span>₹28</span></div></dl></div>
+      </div>
+      <div class="sp-s"></div>
+      <div class="co inf"><div class="cl"></div><div>
+        <span class="ct">Applied identically to all four ad sets</span>
+        Placements set to Advantage+ across Feed, Reels and Stories · Languages Hindi and English ·
+        Optimising for leads · Exclusions for existing students, past 30-day leads and already-skilled marketers.</div></div>
+    </div>
+
+    <div class="conn"><span>Two creatives per ad set — one pain-led, one gain-led</span></div>
+
+    <!-- LEVEL 3 -->
+    <div class="lvl L3">
+      <div class="lvh">
+        <span class="lvn g">Level 3 · Ads</span>
+        <h4>Eight creatives, paired by emotional angle</h4>
+        <span class="tg tg-n">1080 × 1080 · Instant Form</span>
+      </div>
+      <p class="lvd">Each pair holds one opposing angle so the test reads cleanly. All eight ads point to the
+      same Instant Form and the same August 2 webinar.</p>
+      <div class="nodes n4">
+        <div class="node"><div class="nt"><span class="nk nk-b"></span>AS1 · Var A</div><dl>
+          <div class="dr"><b>Theme</b><span>Career upgrade</span></div>
+          <div class="dr"><b>Angle</b><span>Aspiration, salary proof</span></div>
+          <div class="dr"><b>CTA</b><span>Sign Up</span></div></dl></div>
+        <div class="node"><div class="nt"><span class="nk nk-b"></span>AS1 · Var B</div><dl>
+          <div class="dr"><b>Theme</b><span>Side income</span></div>
+          <div class="dr"><b>Angle</b><span>Low-risk second earning</span></div>
+          <div class="dr"><b>CTA</b><span>Learn More</span></div></dl></div>
+        <div class="node"><div class="nt"><span class="nk nk-o"></span>AS2 · Var A</div><dl>
+          <div class="dr"><b>Theme</b><span>Job ready in 90 days</span></div>
+          <div class="dr"><b>Angle</b><span>Pain, unemployment</span></div>
+          <div class="dr"><b>CTA</b><span>Sign Up</span></div></dl></div>
+        <div class="node"><div class="nt"><span class="nk nk-o"></span>AS2 · Var B</div><dl>
+          <div class="dr"><b>Theme</b><span>Freelancing income</span></div>
+          <div class="dr"><b>Angle</b><span>Independence, gain</span></div>
+          <div class="dr"><b>CTA</b><span>Learn More</span></div></dl></div>
+        <div class="node"><div class="nt"><span class="nk nk-p"></span>AS3 · Var A</div><dl>
+          <div class="dr"><b>Theme</b><span>Work from home</span></div>
+          <div class="dr"><b>Angle</b><span>Flexibility, empowerment</span></div>
+          <div class="dr"><b>CTA</b><span>Learn More</span></div></dl></div>
+        <div class="node"><div class="nt"><span class="nk nk-p"></span>AS3 · Var B</div><dl>
+          <div class="dr"><b>Theme</b><span>Self reliance</span></div>
+          <div class="dr"><b>Angle</b><span>Identity, social proof</span></div>
+          <div class="dr"><b>CTA</b><span>Sign Up</span></div></dl></div>
+        <div class="node"><div class="nt"><span class="nk nk-g"></span>AS4 · Var A</div><dl>
+          <div class="dr"><b>Theme</b><span>Digital growth</span></div>
+          <div class="dr"><b>Angle</b><span>Cost saving vs agency</span></div>
+          <div class="dr"><b>CTA</b><span>Get Offer</span></div></dl></div>
+        <div class="node"><div class="nt"><span class="nk nk-g"></span>AS4 · Var B</div><dl>
+          <div class="dr"><b>Theme</b><span>Lead generation</span></div>
+          <div class="dr"><b>Angle</b><span>Business growth</span></div>
+          <div class="dr"><b>CTA</b><span>Get Offer</span></div></dl></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="sp"></div>
+  <div class="grid g2">
+    <div class="card"><h4>Why CBO and not ABO for this test</h4>
+      <p>On a three-day runway at ₹650 a day, ABO would split the budget into ₹160 slices — too little for
+      any ad set to exit the learning phase. CBO pools the spend so a winning persona can emerge inside the
+      test window. Once identified, that persona graduates into its own scaling campaign where ABO control
+      becomes useful again.</p></div>
+    <div class="card"><h4>What the account looks like after the test</h4>
+      <p>Three campaigns running in parallel: this test campaign continuing at low spend for fresh learning,
+      a CBO scaling campaign carrying the proven persona at increasing budget, and a retargeting campaign
+      against video viewers, form openers who did not submit, and page engagers — historically the cheapest
+      leads in the account.</p></div>
+  </div>
+</div></section>
+<!-- ================= CREATIVE ================= -->
+<section id="creative" class="alt"><div class="wrap">
+  <div class="shead">
+    <div class="eyebrow">06 — Ad Creative</div>
+    <h2 class="sh">The eleven ads, as they appear in feed</h2>
+    <p class="dek">These are the final production creatives. Every frame leads with one dominant idea —
+    the salary comparison, the employability gap, the independence promise or the agency-cost question —
+    then supports it with the free 90-day webinar offer and a single strong CTA. All visuals are 1080 × 1080,
+    mobile-first, high-contrast typography on the Zinmatt orange/black/white system.</p>
+  </div>
+
+  <div class="adgrid">
+
+    <!-- ============ C01 · AS1 Var A · Salary comparison ============ -->
+    <div class="adcell wide">
+      <div class="adtag"><span class="tg tg-b">AS1 · Var A</span><span class="nm">Salary Comparison</span>
+        <span class="tg tg-n">Working Pro</span></div>
+      <div class="post">
+        <div class="phead"><div class="pgav">Z</div>
+          <div><div class="pg">Zinmatt</div><div class="ps">Sponsored</div></div></div>
+        <div class="pcopy"><strong>BPO mein ₹22K kama rahe ho?</strong> Digital marketing mein fresher
+          ₹35K+. Skill badlo, career badlo — free webinar.</div>
+        <img class="crimg nf" src="Assets%20For%20Clietnt/AdSet1_WorkingPro_BPO22K_vs_DM35K.png.png"
+          alt="BPO ₹22K vs Digital Marketing ₹35K+ — skill badlo, career badlo" loading="lazy">
+        <div class="pfoot"><div><div class="ph">SKILL BADLO. CAREER BADLO.</div>
+          <div class="pd">Free webinar · 2 August · 11 AM · Live classes + AI modules</div></div>
+          <div class="pcta">Register Now</div></div>
+      </div>
+      <div class="adspec"><div><b>Persona</b> BPO employee, 24</div><div><b>Angle</b> Salary proof</div>
+        <div><b>Format</b> 1:1 Feed</div></div>
+    </div>
+
+    <!-- ============ C02 · AS1 Var B · Stagnation ============ -->
+    <div class="adcell">
+      <div class="adtag"><span class="tg tg-b">AS1 · Var B</span><span class="nm">Career Stagnation</span>
+        <span class="tg tg-n">Working Pro</span></div>
+      <div class="post">
+        <div class="phead"><div class="pgav">Z</div>
+          <div><div class="pg">Zinmatt</div><div class="ps">Sponsored</div></div></div>
+        <div class="pcopy"><strong>Job same hai. Salary same hai. Growth kahan hai?</strong> Digital skills
+          seekho, apni value badhao — live, practical, Hinglish.</div>
+        <img class="crimg nf" src="Assets%20For%20Clietnt/AdSet1_WorkingPro_JobSameHaiGrowthKahanHai.png.png"
+          alt="Job same hai, salary same hai, growth kahan hai? Career growth starts here" loading="lazy">
+        <div class="pfoot"><div><div class="ph">CAREER GROWTH STARTS HERE.</div>
+          <div class="pd">Free live webinar · 2 August · 11 AM · Google Ads, Meta, SEO, YouTube</div></div>
+          <div class="pcta">Register Free</div></div>
+      </div>
+      <div class="adspec"><div><b>Persona</b> Stagnant employee, 28</div><div><b>Angle</b> Stagnation</div>
+        <div><b>Format</b> 1:1 Feed</div></div>
+    </div>
+
+    <!-- ============ C03 · AS1 Var C · Salary jump ============ -->
+    <div class="adcell">
+      <div class="adtag"><span class="tg tg-b">AS1 · Var C</span><span class="nm">Salary Jump</span>
+        <span class="tg tg-n">Working Pro</span></div>
+      <div class="post">
+        <div class="phead"><div class="pgav">Z</div>
+          <div><div class="pg">Zinmatt</div><div class="ps">Sponsored</div></div></div>
+        <div class="pcopy"><strong>Salary mein jump chahiye?</strong> 90 days free digital marketing —
+          live classes, real projects, mentor support.</div>
+        <img class="crimg nf" src="Assets%20For%20Clietnt/AdSet1_WorkingPro_SalaryMeinJumpChahiye.png.png"
+          alt="Salary mein jump chahiye? 90 days free digital marketing — live, real projects, mentor" loading="lazy">
+        <div class="pfoot"><div><div class="ph">SALARY JUMP STARTS WITH SKILLS.</div>
+          <div class="pd">90 days free · 2 August · 11 AM onwards · Limited seats</div></div>
+          <div class="pcta">Register Free</div></div>
+      </div>
+      <div class="adspec"><div><b>Persona</b> Salary-growth seeker, 27</div><div><b>Angle</b> Income aspiration</div>
+        <div><b>Format</b> 1:1 Feed</div></div>
+    </div>
+
+    <!-- ============ C04 · AS2 Var A · Degree / job gap ============ -->
+    <div class="adcell">
+      <div class="adtag"><span class="tg tg-o">AS2 · Var A</span><span class="nm">Degree → Job</span>
+        <span class="tg tg-n">Graduate</span></div>
+      <div class="post">
+        <div class="phead"><div class="pgav">Z</div>
+          <div><div class="pg">Zinmatt</div><div class="ps">Sponsored</div></div></div>
+        <div class="pcopy"><strong>Degree hai, job nahi?</strong> Ab skills pe focus karo. 90 days free
+          practical digital marketing — seekho, practice karo, aage badho.</div>
+        <img class="crimg nf" src="Assets%20For%20Clietnt/AdSet2_Graduate_DegreeHaiJobNahi_90DayFreeDM.png.png"
+          alt="Degree hai, job nahi? Skill seekhni padegi — 90 days free digital marketing" loading="lazy">
+        <div class="pfoot"><div><div class="ph">LAKSHYA CLEAR HAI. SKILLS PE FOCUS KARO.</div>
+          <div class="pd">Free webinar · 2 August 2025 · 11 AM onwards</div></div>
+          <div class="pcta">Register Free</div></div>
+      </div>
+      <div class="adspec"><div><b>Persona</b> Fresh graduate, 22</div><div><b>Angle</b> Employability gap</div>
+        <div><b>Format</b> 1:1 Feed</div></div>
+    </div>
+
+    <!-- ============ C05 · AS2 Var B · Statistic ============ -->
+    <div class="adcell">
+      <div class="adtag"><span class="tg tg-o">AS2 · Var B</span><span class="nm">26% vs 74%</span>
+        <span class="tg tg-n">Graduate</span></div>
+      <div class="post">
+        <div class="phead"><div class="pgav">Z</div>
+          <div><div class="pg">Zinmatt</div><div class="ps">Sponsored</div></div></div>
+        <div class="pcopy"><strong>Tu 26 mein hai ya 74 mein?</strong> Sirf 26% graduates ko achhi job milti
+          hai. Skills ki kami ki wajah se baaki piche reh jaate hain.</div>
+        <img class="crimg nf" src="Assets%20For%20Clietnt/AdSet2_Graduate_Tu26MeinHaiYa74Mein.png.png"
+          alt="Tu 26 mein hai ya 74 mein? India mein sirf 26% graduates ko achhi job milti hai" loading="lazy">
+        <div class="pfoot"><div><div class="ph">90 DAYS FREE DIGITAL MARKETING WEBINAR.</div>
+          <div class="pd">Live class · Hindi support · Real learning · 2 August · 11 AM</div></div>
+          <div class="pcta">Join Free Webinar</div></div>
+      </div>
+      <div class="adspec"><div><b>Persona</b> Graduate, 23</div><div><b>Angle</b> Curiosity + statistics</div>
+        <div><b>Format</b> 1:1 Feed</div></div>
+    </div>
+
+    <!-- ============ C06 · AS3 Var A · Housewife WFH ============ -->
+    <div class="adcell">
+      <div class="adtag"><span class="tg tg-o">AS3 · Var A</span><span class="nm">Work From Home</span>
+        <span class="tg tg-n">Women</span></div>
+      <div class="post">
+        <div class="phead"><div class="pgav">Z</div>
+          <div><div class="pg">Zinmatt</div><div class="ps">Sponsored</div></div></div>
+        <div class="pcopy"><strong>Agar aap housewife hain, aur work from home karna chahti hain</strong> —
+          digital marketing seekhein aur apne sapnon ko sakaar karein.</div>
+        <img class="crimg nf" src="Assets%20For%20Clietnt/AdSet3_AgerAapHouseWifeh.png.jpeg"
+          alt="Agar aap housewife hain — 90 days free digital marketing classes, work from home" loading="lazy">
+        <div class="pfoot"><div><div class="ph">JOIN OUR 90 DAYS FREE DIGITAL MARKETING CLASSES.</div>
+          <div class="pd">Live classes · Real projects · Expert mentorship · Certificate · 25+ tools</div></div>
+          <div class="pcta">Join Now</div></div>
+      </div>
+      <div class="adspec"><div><b>Persona</b> Housewife, 32</div><div><b>Angle</b> Flexible WFH</div>
+        <div><b>Format</b> 1:1 Feed</div></div>
+    </div>
+
+    <!-- ============ C07 · AS3 Var B · Financial independence ============ -->
+    <div class="adcell">
+      <div class="adtag"><span class="tg tg-o">AS3 · Var B</span><span class="nm">Aatmnirbhar</span>
+        <span class="tg tg-n">Women</span></div>
+      <div class="post">
+        <div class="phead"><div class="pgav">Z</div>
+          <div><div class="pg">Zinmatt</div><div class="ps">Sponsored</div></div></div>
+        <div class="pcopy"><strong>Apna paisa kamana hai? Aatmnirbhar banein.</strong> Sapne aapke hain,
+          kamai bhi aapki hogi — free 90-day course, Hindi support.</div>
+        <img class="crimg nf" src="Assets%20For%20Clietnt/AdSet3_Women_ApnaPaisaKamanaHai_AatmnirbharBanein%20(2).jpeg"
+          alt="Apna paisa kamana hai, aatmnirbhar banein — free 90 days digital marketing course" loading="lazy">
+        <div class="pfoot"><div><div class="ph">NAYI SKILLS. NAYI INCOME. NAYI PEHCHAAN.</div>
+          <div class="pd">Free 90-day course · Flexible · Hindi support · 2 August · 11 AM</div></div>
+          <div class="pcta">Register Free</div></div>
+      </div>
+      <div class="adspec"><div><b>Persona</b> Woman, 30</div><div><b>Angle</b> Financial independence</div>
+        <div><b>Format</b> 1:1 Feed</div></div>
+    </div>
+
+    <!-- ============ C08 · AS3 Var C · Independence (alt) ============ -->
+    <div class="adcell">
+      <div class="adtag"><span class="tg tg-o">AS3 · Var C</span><span class="nm">Apna Paisa</span>
+        <span class="tg tg-n">Women</span></div>
+      <div class="post">
+        <div class="phead"><div class="pgav">Z</div>
+          <div><div class="pg">Zinmatt</div><div class="ps">Sponsored</div></div></div>
+        <div class="pcopy"><strong>Apna paisa kamana hai — aatmnirbhar banein.</strong> WhatsApp, Facebook,
+          Instagram, Canva, YouTube, SEO — apni skills, apni income.</div>
+        <img class="crimg nf" src="Assets%20For%20Clietnt/AdSet3_Women_ApnaPaisaKamanaHai_AatmnirbharBanein.png.png"
+          alt="Apna paisa kamana hai — aatmnirbhar banein, free 90 days digital marketing" loading="lazy">
+        <div class="pfoot"><div><div class="ph">AATMNIRBHAR BANEIN.</div>
+          <div class="pd">Free 90-day course · Flexible learning · Hindi support</div></div>
+          <div class="pcta">Register Free</div></div>
+      </div>
+      <div class="adspec"><div><b>Persona</b> Woman, 34</div><div><b>Angle</b> Independence (alt visual)</div>
+        <div><b>Format</b> 1:1 Feed</div></div>
+    </div>
+
+    <!-- ============ C09 · AS3 Var D · Ghar baithe / phone ============ -->
+    <div class="adcell">
+      <div class="adtag"><span class="tg tg-o">AS3 · Var D</span><span class="nm">Ghar Baithe</span>
+        <span class="tg tg-n">Women</span></div>
+      <div class="post">
+        <div class="phead"><div class="pgav">Z</div>
+          <div><div class="pg">Zinmatt</div><div class="ps">Sponsored</div></div></div>
+        <div class="pcopy"><strong>Ghar baithe kamaana hai?</strong> Apne sapno ko digital skills se reality
+          banao — phone se bhi possible, live classes.</div>
+        <img class="crimg nf" src="Assets%20For%20Clietnt/AdSet3_Women_GharBaitheKamaanaHai_WorkFromHome.png.png"
+          alt="Ghar baithe kamaana hai? 90 days free digital marketing — phone se bhi possible" loading="lazy">
+        <div class="pfoot"><div><div class="ph">TIME FOR YOU. INCOME FOR YOU.</div>
+          <div class="pd">90 days free · Live classes · WhatsApp, Instagram, Canva, YouTube, SEO</div></div>
+          <div class="pcta">Join Now</div></div>
+      </div>
+      <div class="adspec"><div><b>Persona</b> Homemaker, 31</div><div><b>Angle</b> Convenience + phone</div>
+        <div><b>Format</b> 1:1 Feed</div></div>
+    </div>
+
+    <!-- ============ C10 · AS4 Var A · Agency cost ============ -->
+    <div class="adcell">
+      <div class="adtag"><span class="tg tg-g">AS4 · Var A</span><span class="nm">Stop Agency</span>
+        <span class="tg tg-n">Small Biz</span></div>
+      <div class="post">
+        <div class="phead"><div class="pgav">Z</div>
+          <div><div class="pg">Zinmatt</div><div class="ps">Sponsored</div></div></div>
+        <div class="pcopy"><strong>Agency ko paisa de rahe ho, par result same?</strong> Har mahine hazaaron
+          rupaye — khud seekho, paise bachao, business badhao.</div>
+        <img class="crimg nf" src="Assets%20For%20Clietnt/AdSet4_SmallBiz_AgencyKoPaisaDeRaheHo_KhudSeekho.png.png"
+          alt="Agency ko paisa de rahe ho? Khud seekho — 90 days free digital marketing course" loading="lazy">
+        <div class="pfoot"><div><div class="ph">KHUD SEEKHO. PAISE BACHAO. BUSINESS BADAO.</div>
+          <div class="pd">Free webinar · 2 August · 11 AM · Google Business, WordPress, SEO, Meta Ads</div></div>
+          <div class="pcta">Join Free Webinar</div></div>
+      </div>
+      <div class="adspec"><div><b>Persona</b> SMB owner, 38</div><div><b>Angle</b> Agency cost saving</div>
+        <div><b>Format</b> 1:1 Feed</div></div>
+    </div>
+
+    <!-- ============ C11 · AS4 Var B · Leads ============ -->
+    <div class="adcell">
+      <div class="adtag"><span class="tg tg-g">AS4 · Var B</span><span class="nm">More Leads</span>
+        <span class="tg tg-n">Small Biz</span></div>
+      <div class="post">
+        <div class="phead"><div class="pgav">Z</div>
+          <div><div class="pg">Zinmatt</div><div class="ps">Sponsored</div></div></div>
+        <div class="pcopy"><strong>Business ke liye leads chahiye?</strong> Digital marketing free seekho aur
+          apne business ke liye khud leads generate karo — ROI badhao, customers badhao.</div>
+        <img class="crimg nf" src="Assets%20For%20Clietnt/AdSet4_SmallBiz_BusinessKeLiyeLeadsChahiye.png.png"
+          alt="Business ke liye leads chahiye? Khud seekho, khud badho — free digital marketing" loading="lazy">
+        <div class="pfoot"><div><div class="ph">KHUD SEEKHO, KHUD BADHO!</div>
+          <div class="pd">100% free live session · 2 August · 11 AM · Limited seats</div></div>
+          <div class="pcta">Register Free</div></div>
+      </div>
+      <div class="adspec"><div><b>Persona</b> SMB owner, 41</div><div><b>Angle</b> Lead generation</div>
+        <div><b>Format</b> 1:1 Feed</div></div>
+    </div>
+
+  </div>
+
+  <div class="sp"></div>
+  <div class="grid g3">
+    <div class="card"><div class="ico i-n">01</div><h4>Specifications</h4>
+      <p>1080 × 1080 for Feed, 1080 × 1920 for Reels and Stories. Primary text within 125 characters,
+      headline within 40, description within 30. Safe margins respected on all four edges.</p></div>
+    <div class="card"><div class="ico i-n">02</div><h4>Design rules applied</h4>
+      <p>One promise per frame. Text under 20% of the image area. Brand mark and zero-fee badge always
+      present. High contrast for small mobile viewports. No stock-photo clutter competing with the message.</p></div>
+    <div class="card"><div class="ico i-n">03</div><h4>What is being tested</h4>
+      <p>Pain framing against gain framing, Hindi against Hinglish, number-led against statement-led
+      headlines, light layouts against dark layouts, and CTA choice across Register Free, Join Free Webinar
+      and Join Now.</p></div>
+  </div>
+</div></section>
+<!-- ================= BUDGET ================= -->
+<section id="budget"><div class="wrap">
+  <div class="shead">
+    <div class="eyebrow g">07 — Budget &amp; Forecast</div>
+    <h2 class="sh">₹2,750 to prove the model</h2>
+    <p class="dek">Deliberately small. This spend buys a decision, not a customer base. Scale follows only
+    after the winning persona is identified.</p>
+  </div>
+
+  <div class="grid g2" style="align-items:start">
+    <div class="chart">
+      <h3 class="bh" style="font-size:17px;margin-bottom:4px">Daily budget ramp</h3>
+      <p class="bhs" style="font-size:13px;margin-bottom:18px">Confidence increases, budget follows.</p>
+      <div class="cbars">
+        <div class="cb"><div class="cbf f1" style="height:40%"><span class="bv">₹500</span></div>
+          <div class="bk"><b>Day 1</b>Launch</div></div>
+        <div class="cb"><div class="cbf f2" style="height:74%"><span class="bv">₹1,000</span></div>
+          <div class="bk"><b>Day 2</b>Optimise</div></div>
+        <div class="cb"><div class="cbf f3" style="height:94%"><span class="bv">₹1,250</span></div>
+          <div class="bk"><b>Day 3</b>Push</div></div>
+      </div>
+      <div class="clegend">
+        <div class="clg"><span class="clgd" style="background:var(--or)"></span>Learning phase, no cuts</div>
+        <div class="clg"><span class="clgd" style="background:var(--bl)"></span>First pauses applied</div>
+        <div class="clg"><span class="clgd" style="background:var(--gr)"></span>Winners scaled, urgency copy</div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div class="card"><h4>Where the money goes</h4>
+        <p>CBO decides distribution, but based on estimated CPL the expected split lands roughly at 32%
+        to Tier-2 graduates, 26% to working professionals, 24% to women and 18% to business owners.
+        We do not force this split — we observe it and then act on it.</p></div>
+      <div class="co inf"><div class="cl"></div><div>
+        <span class="ct">Why a CPL this low is realistic</span>
+        A zero-fee offer inside a category where every competitor charges between ₹25,000 and ₹2.5 lakh
+        produces unusually high click-through. Free-offer lead generation in Indian Tier-2 markets routinely
+        lands between ₹12 and ₹35 per lead on Meta. Our forecast sits in the middle of that band, not at the edge.</div></div>
+    </div>
+  </div>
+
+  <div class="sp"></div>
+  <h3 class="bh">Three scenarios</h3>
+  <p class="bhs">Each scenario carries a pre-agreed next action, so the decision is made before the data arrives.</p>
+  <div class="tbl"><div class="tsc"><table>
+    <thead><tr><th>Scenario</th><th>CPL</th><th>Leads from ₹2,750</th><th>Attendees at 45%</th><th>Decision</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Conservative</strong></td><td>₹30</td><td>92</td><td>41</td>
+        <td><span class="tg tg-w">Viable. Hold budget, rebuild the weakest audience.</span></td></tr>
+      <tr class="hl"><td><strong>Expected</strong></td><td><strong>₹20</strong></td><td><strong>136+</strong></td><td><strong>61</strong></td>
+        <td><span class="tg tg-g">Target hit. Scale the winning ad set immediately.</span></td></tr>
+      <tr><td><strong>Best case</strong></td><td>₹15</td><td>183</td><td>82</td>
+        <td><span class="tg tg-b">Aggressive scale, triple budget for the next cycle.</span></td></tr>
+    </tbody>
+  </table></div></div>
+</div></section>
+
+<!-- ================= KPI ================= -->
+<section id="kpi" class="alt"><div class="wrap">
+  <div class="shead">
+    <div class="eyebrow b">08 — Measurement &amp; Governance</div>
+    <h2 class="sh">Every metric has an action attached</h2>
+    <p class="dek">Optimisation runs on rules agreed in advance, not on opinion formed mid-campaign.
+    These thresholds are what we will report against daily.</p>
+  </div>
+
+  <div class="grid g4">
+    <div class="stat"><div class="bar-t bt-o"></div><div class="n">₹15–30</div><div class="t">Cost per lead</div>
+      <div class="d">Primary success metric. Above ₹40 for two days means the audience gets rebuilt.</div></div>
+    <div class="stat"><div class="bar-t bt-b"></div><div class="n">1.5%+</div><div class="t">Click-through rate</div>
+      <div class="d">Creative health. Below 1% after 1,000 impressions the ad is paused.</div></div>
+    <div class="stat"><div class="bar-t bt-g"></div><div class="n">₹80–150</div><div class="t">CPM</div>
+      <div class="d">Audience competitiveness. A spike usually means the audience is too narrow.</div></div>
+    <div class="stat"><div class="bar-t bt-o"></div><div class="n">Under 2.0</div><div class="t">Frequency</div>
+      <div class="d">Above 2.5 within three days indicates creative fatigue and a refresh is due.</div></div>
+    <div class="stat"><div class="bar-t bt-b"></div><div class="n">60%+</div><div class="t">Form completion</div>
+      <div class="d">Below this, the Instant Form is asking for too much information.</div></div>
+    <div class="stat"><div class="bar-t bt-g"></div><div class="n">40–50%</div><div class="t">Webinar show-up</div>
+      <div class="d">Driven almost entirely by discipline in the WhatsApp reminder sequence.</div></div>
+    <div class="stat"><div class="bar-t bt-o"></div><div class="n">Average+</div><div class="t">Quality ranking</div>
+      <div class="d">Below average signals a mismatch between the ad promise and the form experience.</div></div>
+    <div class="stat"><div class="bar-t bt-b"></div><div class="n">₹45</div><div class="t">Cost per attendee</div>
+      <div class="d">Target derived from expected CPL and show-up rate. The number the business feels.</div></div>
+  </div>
+
+  <div class="sp"></div>
+  <h3 class="bh">Optimisation rules</h3>
+  <p class="bhs">Agreed before launch. No mid-campaign improvisation.</p>
+  <div class="tbl"><div class="tsc"><table>
+    <thead><tr><th>Trigger</th><th>Action</th><th>Timing</th></tr></thead>
+    <tbody>
+      <tr><td>CTR below 1% after 1,000 impressions</td>
+        <td><span class="tg tg-o">Pause the ad</span> — the ad set keeps running</td><td>Day 2 review</td></tr>
+      <tr><td>CPL under ₹20 on an ad set</td>
+        <td><span class="tg tg-g">Increase budget 20%</span> by duplicating, never by editing a winner directly</td><td>Day 2 and Day 3</td></tr>
+      <tr><td>CPL above ₹40 for two consecutive days</td>
+        <td><span class="tg tg-o">Pause the ad set</span> and rebuild the targeting</td><td>Day 3</td></tr>
+      <tr><td>Frequency above 2.5</td>
+        <td><span class="tg tg-w">Refresh creative</span> and widen the audience</td><td>Ongoing</td></tr>
+      <tr><td>One persona clearly dominating</td>
+        <td><span class="tg tg-b">Graduate it</span> into a dedicated CBO scaling campaign</td><td>Post-webinar</td></tr>
+      <tr><td>Form opened but not submitted</td>
+        <td><span class="tg tg-b">Retarget abandoners</span> — historically the cheapest leads available</td><td>Post-webinar</td></tr>
+    </tbody>
+  </table></div></div>
+
+  <div class="sp"></div>
+  <div class="grid g2">
+    <div class="co wr"><div class="cl"></div><div>
+      <span class="ct">Safety protocol</span>
+      Every campaign, ad set and ad is created in paused state and read back for verification before
+      anything is activated. No budget change, no scaling action and no audience edit happens without
+      your explicit written approval.</div></div>
+    <div class="co ok"><div class="cl"></div><div>
+      <span class="ct">Reporting cadence</span>
+      A daily snapshot through the three-day sprint covering spend, leads, CPL and CTR at ad set level.
+      A full post-mortem within 24 hours of the webinar. A scaling recommendation naming the winning persona
+      and the budget required.</div></div>
+  </div>
+</div></section>
+
+<!-- ================= NEXT ================= -->
+<section id="next"><div class="wrap">
+  <div class="shead">
+    <div class="eyebrow">09 — Next Steps</div>
+    <h2 class="sh">What we need to press go</h2>
+    <p class="dek">The build is complete and paused. Three things stand between this document and a
+    live campaign.</p>
+  </div>
+
+  <div class="grid g3">
+    <div class="card"><div class="ico i-o">01</div><h4>Access required from you</h4>
+      <ul class="chk" style="margin-top:12px">
+        <li><span class="ckm">✓</span>Meta Business Manager and ad account access</li>
+        <li><span class="ckm">✓</span>Facebook Page and Instagram account link</li>
+        <li><span class="ckm">✓</span>Pixel or Conversions API on the thank-you page</li>
+        <li><span class="ckm">✓</span>WhatsApp community invite link</li>
+        <li><span class="ckm">✓</span>Confirmed webinar registration destination</li>
+      </ul></div>
+    <div class="card"><div class="ico i-b">02</div><h4>Sign-off required on</h4>
+      <ul class="chk" style="margin-top:12px">
+        <li><span class="ckm">✓</span>The eight creatives shown in section six</li>
+        <li><span class="ckm">✓</span>Ad copy in Hindi and Hinglish</li>
+        <li><span class="ckm">✓</span>The ₹2,750 three-day test budget</li>
+        <li><span class="ckm">✓</span>All four targeting definitions and exclusions</li>
+        <li><span class="ckm">✓</span>The tools-cost disclosure script for webinar Day 1</li>
+      </ul></div>
+    <div class="card"><div class="ico i-g">03</div><h4>Then we build and hand over</h4>
+      <ul class="chk" style="margin-top:12px">
+        <li><span class="ckm">✓</span>Campaign, four ad sets and eight ads created, all paused</li>
+        <li><span class="ckm">✓</span>Structure read back and verified against this document</li>
+        <li><span class="ckm">✓</span>You review inside Ads Manager</li>
+        <li><span class="ckm">✓</span>You activate when ready</li>
+        <li><span class="ckm">✓</span>Daily reporting begins from hour one</li>
+      </ul></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fg">
+    <div>
+      <div class="flg"><div class="lgm">Z</div><span class="lgt">Zinmatt</span></div>
+      <p>Meta Ads campaign blueprint for the FREE Advanced Digital Marketing course.
+      Built on 15+ research sources, five validated personas and eight production-ready creatives.
+      Prepared for client review ahead of the August 2 webinar.</p>
+    </div>
+    <div>
+      <h5>Campaign</h5>
+      <ul>
+        <li>Objective — Lead Generation</li>
+        <li>Budget — CBO, ₹2,750 over 3 days</li>
+        <li>Ad sets — 4 personas</li>
+        <li>Ads — 8 creatives</li>
+        <li>Status — Paused pending approval</li>
+      </ul>
+    </div>
+    <div>
+      <h5>Targets</h5>
+      <ul>
+        <li>CPL — ₹15 to ₹30</li>
+        <li>Leads — 136 or more</li>
+        <li>Show-up — 40 to 50 percent</li>
+        <li>CTR — above 1.5 percent</li>
+        <li>Frequency — under 2.0</li>
+      </ul>
+    </div>
+  </div>
+  <div class="fb">
+    <span>Zinmatt · Meta Ads Blueprint · Confidential client document</span>
+    <span>Webinar — August 2</span>
+  </div>
+</div></footer>
+</body>
+</html>
